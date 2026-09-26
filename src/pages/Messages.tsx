@@ -3,26 +3,10 @@ import { Send, Paperclip, Hash, User, Trash2, Image, FileText, GitBranch, Video,
 import { uploadToCloudinary } from '../lib/cloudinary';
 import { useAuthStore } from '../store/authStore';
 
-const CHANNELS = [
-  { id: '1', name: 'general', type: 'community' },
-  { id: '2', name: 'electronics-design', type: 'project' },
-  { id: '3', name: 'ai-research', type: 'project' },
-];
-
-const DIRECT_MESSAGES = [
-  { id: '4', name: 'Rahul (Admin)' },
-  { id: '5', name: 'Nazal' },
-  { id: '6', name: 'Arun' },
-  { id: '7', name: 'Vivek' },
-];
-
+const CHANNELS: any[] = [];
+const DIRECT_MESSAGES: any[] = [];
 type Message = { id: string; sender: string; time: string; text: string; attachment?: { type: string, url: string, name: string } };
-
-const MOCK_DATA: Message[] = [
-  { id: '1', sender: 'Nazal', time: '10:30 AM', text: 'I just uploaded schematic_v3.pdf to the Energy project.', attachment: { type: 'file', url: '#', name: 'schematic_v3.pdf' } },
-  { id: '2', sender: 'Rahul (Admin)', time: '10:32 AM', text: 'Looks good. Did you change the buck converter component?' },
-  { id: '3', sender: 'Nazal', time: '10:35 AM', text: 'Yes, replaced it with a more stable one for 5V.' },
-];
+const MOCK_DATA: Message[] = [];
 
 export default function Messages() {
   const { user } = useAuthStore();
