@@ -2,28 +2,22 @@ import React from 'react';
 import { IndianRupee } from 'lucide-react';
 
 export default function CostsTab() {
-  const transactions = [
-    { id: 1, desc: 'PCB Manufacturing (JLCPCB)', category: 'PCB', amount: 900, date: 'Sept 10, 2026', paidBy: 'Nazal' },
-    { id: 2, desc: 'Components from Robu', category: 'Components', amount: 2400, date: 'Sept 5, 2026', paidBy: 'Rahul' },
-    { id: 3, desc: 'Custom 3D Print Enclosure', category: 'Manufacturing', amount: 600, date: 'Sept 15, 2026', paidBy: 'Nazal' },
-    { id: 4, desc: 'Transport / Courier', category: 'Transport', amount: 300, date: 'Sept 12, 2026', paidBy: 'Arun' },
-    { id: 5, desc: 'Cloud Server (Monthly)', category: 'Cloud', amount: 200, date: 'Sept 1, 2026', paidBy: 'Project Fund' },
-  ];
+  const transactions: any[] = [];
 
   return (
     <div className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="border rounded-xl p-6 bg-card shadow-sm border-l-4 border-l-primary">
           <p className="text-muted-foreground text-sm font-medium">Estimated Budget</p>
-          <h3 className="text-3xl font-bold mt-2">₹6,000</h3>
+          <h3 className="text-3xl font-bold mt-2">₹0</h3>
         </div>
         <div className="border rounded-xl p-6 bg-card shadow-sm border-l-4 border-l-red-500">
           <p className="text-muted-foreground text-sm font-medium">Actual Cost</p>
-          <h3 className="text-3xl font-bold mt-2 text-red-500">₹4,400</h3>
+          <h3 className="text-3xl font-bold mt-2">₹0</h3>
         </div>
         <div className="border rounded-xl p-6 bg-card shadow-sm border-l-4 border-l-green-500">
           <p className="text-muted-foreground text-sm font-medium">Remaining</p>
-          <h3 className="text-3xl font-bold mt-2 text-green-500">₹1,600</h3>
+          <h3 className="text-3xl font-bold mt-2">₹0</h3>
         </div>
       </div>
 

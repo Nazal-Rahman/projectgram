@@ -1,12 +1,7 @@
 import { useState } from 'react';
 import { Search, Plus, Filter } from 'lucide-react';
 
-const MOCK_INVENTORY = [
-  { id: '1', name: 'ESP32-WROOM', partNo: 'ESP32-WROOM-32U', qty: 8, available: 6, reserved: 2, status: 'IN STOCK' },
-  { id: '2', name: '10K Resistor', partNo: 'RES-10K-0805', qty: 150, available: 150, reserved: 0, status: 'IN STOCK' },
-  { id: '3', name: 'HC-SR04', partNo: 'HC-SR04', qty: 3, available: 3, reserved: 0, status: 'LOW STOCK' },
-  { id: '4', name: 'Raspberry Pi 4', partNo: 'RPI4-4GB', qty: 0, available: 0, reserved: 0, status: 'OUT OF STOCK' },
-];
+const MOCK_DATA = [];
 
 export default function Inventory() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -69,7 +64,7 @@ export default function Inventory() {
               </tr>
             </thead>
             <tbody>
-              {MOCK_INVENTORY.filter(item => item.name.toLowerCase().includes(searchTerm.toLowerCase())).map(item => (
+              {MOCK_DATA.filter(item => item.name.toLowerCase().includes(searchTerm.toLowerCase())).map(item => (
                 <tr key={item.id} className="hover:bg-muted/50 border-b last:border-0">
                   <td className="p-4 font-medium">{item.name}</td>
                   <td className="p-4 text-muted-foreground text-sm">{item.partNo}</td>

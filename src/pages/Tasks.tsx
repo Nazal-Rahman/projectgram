@@ -1,15 +1,10 @@
 import { useState } from 'react';
 import { CheckCircle, Circle, Clock } from 'lucide-react';
 
-const MOCK_TASKS = [
-  { id: '1', title: 'Research ultrasonic sensor accuracy for outdoor conditions', project: 'Energy Optimization System', priority: 'HIGH', status: 'IN PROGRESS', due: 'Today' },
-  { id: '2', title: 'Design buck converter PCB layout', project: 'Hairpin Bend Safety', priority: 'CRITICAL', status: 'TO DO', due: 'Tomorrow' },
-  { id: '3', title: 'Order components from BOM', project: 'Energy Optimization System', priority: 'NORMAL', status: 'TO DO', due: 'Next Week' },
-  { id: '4', title: 'Draft initial requirements document', project: 'Projectgram Platform', priority: 'NORMAL', status: 'DONE', due: 'Last Week' },
-];
+const MOCK_DATA = [];
 
 export default function Tasks() {
-  const [tasks, setTasks] = useState(MOCK_TASKS);
+  const [tasks, setTasks] = useState(MOCK_DATA);
 
   const toggleTask = (id: string) => {
     setTasks(tasks.map(t => {

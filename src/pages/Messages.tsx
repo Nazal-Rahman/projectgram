@@ -18,7 +18,7 @@ const DIRECT_MESSAGES = [
 
 type Message = { id: string; sender: string; time: string; text: string; attachment?: { type: string, url: string, name: string } };
 
-const MOCK_MESSAGES: Message[] = [
+const MOCK_DATA: Message[] = [
   { id: '1', sender: 'Nazal', time: '10:30 AM', text: 'I just uploaded schematic_v3.pdf to the Energy project.', attachment: { type: 'file', url: '#', name: 'schematic_v3.pdf' } },
   { id: '2', sender: 'Rahul (Admin)', time: '10:32 AM', text: 'Looks good. Did you change the buck converter component?' },
   { id: '3', sender: 'Nazal', time: '10:35 AM', text: 'Yes, replaced it with a more stable one for 5V.' },
@@ -33,7 +33,7 @@ export default function Messages() {
 
   const [activeChat, setActiveChat] = useState('general');
   const [inputText, setInputText] = useState('');
-  const [messages, setMessages] = useState<Message[]>(MOCK_MESSAGES);
+  const [messages, setMessages] = useState<Message[]>(MOCK_DATA);
   const [showAttachments, setShowAttachments] = useState(false);
   const [uploading, setUploading] = useState(false);
   

@@ -2,10 +2,7 @@ import React from 'react';
 import { FlaskConical } from 'lucide-react';
 
 export default function ExperimentsTab() {
-  const experiments = [
-    { id: '#08', title: 'Measure ultrasonic sensor accuracy', date: 'Sept 22, 2026', status: 'SUCCESS', conclusion: 'Acceptable for prototype (1% error).' },
-    { id: '#07', title: 'Buck converter thermal test', date: 'Sept 18, 2026', status: 'FAILED', conclusion: 'Overheats at 2A load. Need heatsink or different IC.' },
-  ];
+  const experiments: any[] = [];
 
   return (
     <div className="space-y-4">

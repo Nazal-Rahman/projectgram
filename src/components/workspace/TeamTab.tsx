@@ -2,11 +2,7 @@ import React from 'react';
 import { User } from 'lucide-react';
 
 export default function TeamTab() {
-  const team = [
-    { name: 'Naseeb Rahman', role: 'Project Lead', type: 'Admin' },
-    { name: 'Rahul', role: 'Embedded Engineer', type: 'Member' },
-    { name: 'Arun', role: 'AI Engineer', type: 'Member' },
-  ];
+  const team: any[] = [];
 
   return (
     <div className="border rounded-xl bg-card shadow-sm overflow-hidden">

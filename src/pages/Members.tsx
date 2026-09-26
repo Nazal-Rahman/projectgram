@@ -1,56 +1,7 @@
 import { Users, Mail, Phone, Code, Briefcase } from 'lucide-react';
 import { useAuthStore } from '../store/authStore';
 
-const MOCK_MEMBERS = [
-  {
-    id: '1',
-    name: 'Nazal Rahman C.T',
-    nickname: 'nazal',
-    role: 'Lead Developer',
-    email: 'nazalrahman14@gmail.com',
-    phone: '+91 9207842646',
-    bio: 'Full-stack engineer focusing on IoT integrations and robust architectures.',
-    skills: ['React', 'Node.js', 'Firebase', 'IoT', 'C++'],
-    avatar: 'N',
-    color: 'from-blue-500 to-blue-700'
-  },
-  {
-    id: '2',
-    name: 'Rahul Kumar',
-    nickname: 'rahul_admin',
-    role: 'Admin / Hardware Lead',
-    email: 'admin@projectgram.local',
-    phone: '+91 9876543210',
-    bio: 'Hardware engineer with 5 years experience in PCB design and embedded systems.',
-    skills: ['Altium', 'Eagle', 'Embedded C', 'Hardware Design'],
-    avatar: 'R',
-    color: 'from-rose-500 to-rose-700'
-  },
-  {
-    id: '3',
-    name: 'Arun M',
-    nickname: 'arun_ai',
-    role: 'AI Researcher',
-    email: 'arun@projectgram.local',
-    phone: '+91 9876543211',
-    bio: 'Specializing in edge AI and computer vision models for microcontrollers.',
-    skills: ['Python', 'TensorFlow', 'TinyML', 'C++'],
-    avatar: 'A',
-    color: 'from-emerald-500 to-emerald-700'
-  },
-  {
-    id: '4',
-    name: 'Vivek',
-    nickname: 'viv',
-    role: 'Mechanical Engineer',
-    email: 'vivek@projectgram.local',
-    phone: '+91 9876543212',
-    bio: 'Designing 3D printed enclosures and custom parts for electronics.',
-    skills: ['SolidWorks', 'AutoCAD', '3D Printing'],
-    avatar: 'V',
-    color: 'from-amber-500 to-amber-700'
-  }
-];
+const MOCK_DATA = [];
 
 export default function Members() {
   const { user } = useAuthStore();
@@ -68,7 +19,7 @@ export default function Members() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-        {MOCK_MEMBERS.map(member => (
+        {MOCK_DATA.map(member => (
           <div key={member.id} className="border bg-card rounded-xl shadow-sm overflow-hidden flex flex-col hover:shadow-md transition">
             <div className="h-24 bg-gradient-to-r from-muted to-muted/50 border-b relative">
               <div className={`absolute -bottom-10 left-6 w-20 h-20 rounded-xl bg-gradient-to-br ${member.color} text-white flex items-center justify-center text-3xl font-bold border-4 border-card shadow-sm`}>

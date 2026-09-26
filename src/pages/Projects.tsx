@@ -1,9 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const MOCK_PROJECTS = [
-  { id: '1', name: 'Energy Optimization System', status: 'PROTOTYPE', version: 'V2.1', budget: '₹6000' },
-  { id: '2', name: 'Hairpin Bend Safety System', status: 'DESIGN', version: 'V1.0', budget: '₹12000' },
-];
+const MOCK_DATA = [];
 
 export default function Projects() {
   return (
@@ -14,7 +11,7 @@ export default function Projects() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {MOCK_PROJECTS.map(p => (
+        {MOCK_DATA.map(p => (
           <Link key={p.id} to={`/app/projects/${p.id}`} className="block border rounded-lg overflow-hidden bg-card hover:border-primary transition">
             <div className="h-32 bg-muted flex items-center justify-center text-muted-foreground">
               [Cover Image]

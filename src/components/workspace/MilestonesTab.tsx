@@ -2,12 +2,7 @@ import React from 'react';
 import { CheckCircle, Circle } from 'lucide-react';
 
 export default function MilestonesTab() {
-  const milestones = [
-    { title: 'Research & Requirements', status: 'COMPLETED', date: 'Sept 10, 2026' },
-    { title: 'Initial Prototype', status: 'COMPLETED', date: 'Sept 25, 2026' },
-    { title: 'PCB Design V1', status: 'IN PROGRESS', date: 'Oct 15, 2026' },
-    { title: 'Testing & Validation', status: 'PENDING', date: 'Nov 1, 2026' },
-  ];
+  const milestones: any[] = [];
 
   return (
     <div className="border rounded-xl bg-card shadow-sm p-6">
