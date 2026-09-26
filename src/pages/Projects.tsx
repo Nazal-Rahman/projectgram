@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const MOCK_DATA = [];
+const MOCK_DATA: any[] = [];
 
 export default function Projects() {
   return (

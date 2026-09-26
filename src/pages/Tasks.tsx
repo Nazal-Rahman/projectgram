@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { CheckCircle, Circle, Clock } from 'lucide-react';
 
-const MOCK_DATA = [];
+const MOCK_DATA: any[] = [];
 
 export default function Tasks() {
   const [tasks, setTasks] = useState(MOCK_DATA);

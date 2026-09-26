@@ -1,7 +1,7 @@
 import { Users, Mail, Phone, Code, Briefcase } from 'lucide-react';
 import { useAuthStore } from '../store/authStore';
 
-const MOCK_DATA = [];
+const MOCK_DATA: any[] = [];
 
 export default function Members() {
   const { user } = useAuthStore();
@@ -62,7 +62,7 @@ export default function Members() {
                   <Code size={14} /> Core Skills
                 </h4>
                 <div className="flex flex-wrap gap-2">
-                  {member.skills.map(skill => (
+                  {member.skills.map((skill: any) => (
                     <span key={skill} className="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded-md">
                       {skill}
                     </span>

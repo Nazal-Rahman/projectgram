@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Search, Plus, Filter } from 'lucide-react';
 
-const MOCK_DATA = [];
+const MOCK_DATA: any[] = [];
 
 export default function Inventory() {
   const [searchTerm, setSearchTerm] = useState('');
