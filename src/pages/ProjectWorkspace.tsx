@@ -9,7 +9,6 @@ import BOMTab from '../components/workspace/BOMTab';
 import ExperimentsTab from '../components/workspace/ExperimentsTab';
 import BuildLogsTab from '../components/workspace/BuildLogsTab';
 import CostsTab from '../components/workspace/CostsTab';
-import AISearchTab from '../components/workspace/AISearchTab';
 
 export default function ProjectWorkspace() {
   const { id } = useParams();
@@ -17,7 +16,7 @@ export default function ProjectWorkspace() {
   
   const tabs = [
     'Overview', 'Tasks', 'Team', 'Milestones', 'Notes', 'Files', 
-    'BOM', 'Inventory', 'Experiments', 'Build Logs', 'Costs', 'AI Search'
+    'BOM', 'Inventory', 'Experiments', 'Build Logs', 'Costs'
   ];
 
   const renderTabContent = () => {
@@ -31,7 +30,6 @@ export default function ProjectWorkspace() {
       case 'Experiments': return <ExperimentsTab />;
       case 'Build Logs': return <BuildLogsTab />;
       case 'Costs': return <CostsTab />;
-      case 'AI Search': return <AISearchTab />;
       case 'Tasks': 
         return (
             <div className="border rounded-lg p-6 bg-card">

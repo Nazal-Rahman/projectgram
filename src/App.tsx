@@ -12,7 +12,6 @@ import Profile from './pages/Profile';
 import Settings from './pages/Settings';
 import Members from './pages/Members';
 import Tools from './pages/Tools';
-import AIAssistant from './pages/AIAssistant';
 import Login from './pages/Login';
 
 function App() {
@@ -101,9 +100,6 @@ function AuthLayout({ deviceExperience }: { deviceExperience: string | null }) {
             <Link to="/app" className="flex items-center space-x-3 px-3 py-2.5 rounded-lg hover:bg-muted font-medium transition-colors text-muted-foreground hover:text-foreground">
               <HomeIcon size={20} /> <span>Dashboard</span>
             </Link>
-            <Link to="/app/ai" className="flex items-center space-x-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 font-bold transition-colors">
-              <Sparkles size={20} /> <span>Grok AI</span>
-            </Link>
             <Link to="/app/projects" className="flex items-center space-x-3 px-3 py-2.5 rounded-lg hover:bg-muted font-medium transition-colors text-muted-foreground hover:text-foreground">
               <Briefcase size={20} /> <span>Projects</span>
             </Link>
@@ -154,7 +150,6 @@ function AuthLayout({ deviceExperience }: { deviceExperience: string | null }) {
         <div className="p-4 md:p-8 overflow-auto flex-1">
           <Routes>
             <Route path="/" element={<Dashboard />} />
-            <Route path="/ai" element={<AIAssistant />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/:id" element={<ProjectWorkspace />} />
             <Route path="/tasks" element={<Tasks />} />
