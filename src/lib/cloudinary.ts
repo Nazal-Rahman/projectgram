@@ -1,7 +1,7 @@
 export const CLOUDINARY_CONFIG = {
-  cloudName: 'projectgram',
-  apiKey: '937955666339829',
-  apiSecret: '3g7y0mp5lo2_HnXoPAiKWEU3NNs' // Warning: In a production environment, never expose the secret key in the frontend. 
+  cloudName: import.meta.env.VITE_CLOUDINARY_CLOUD_NAME || 'projectgram',
+  apiKey: import.meta.env.VITE_CLOUDINARY_API_KEY,
+  apiSecret: import.meta.env.VITE_CLOUDINARY_API_SECRET // Warning: In a production environment, never expose the secret key in the frontend. 
 };
 
 /**
