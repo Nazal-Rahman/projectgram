@@ -178,8 +178,31 @@ function AuthLayout({ deviceExperience }: { deviceExperience: string | null }) {
 
 // Public Pages
 function Home() {
-  const handleInstall = () => {
-    alert("To install this app, click your browser's 'Install' icon in the address bar, or select 'Add to Home Screen' from your mobile browser menu.");
+  const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
+
+  useEffect(() => {
+    const handler = (e: any) => {
+      // Prevent the mini-infobar from appearing on mobile
+      e.preventDefault();
+      // Stash the event so it can be triggered later.
+      setDeferredPrompt(e);
+    };
+
+    window.addEventListener('beforeinstallprompt', handler);
+    return () => window.removeEventListener('beforeinstallprompt', handler);
+  }, []);
+
+  const handleInstall = async () => {
+    if (!deferredPrompt) {
+      alert("Your browser doesn't support direct installation or the app is already installed. Try clicking the install icon in your URL bar!");
+      return;
+    }
+    // Show the install prompt
+    deferredPrompt.prompt();
+    // Wait for the user to respond to the prompt
+    const { outcome } = await deferredPrompt.userChoice;
+    // We've used the prompt, and can't use it again, throw it away
+    setDeferredPrompt(null);
   };
 
   return (
